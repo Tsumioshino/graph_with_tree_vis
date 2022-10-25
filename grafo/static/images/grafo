@@ -1,11 +1,5 @@
-digraph G {
+graph G {
 	graph [label=Grafo labelloc=t]
 	rankdir=LR shape=circle size=30.0
 	a
-	b
-	c
-	d
-	e
-	f
-	g
 }
