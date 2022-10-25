@@ -114,157 +114,80 @@
         </div>
       </div>
       <div class="flex flex-row flex-wrap justify-start">
-        <div class="w-full lg:w-1/4 bg-white rounded-lg lg:rounded-l-none mx-auto">
-
-          <div class="md:flex md:mt-8 md:-mx-4">
-            <div class="w-full md:mx-4 rounded-md bg-cover bg-center">
-              <div class="bg-opacity-50 flex items-center group relative">
-                  <div class="flex">
-                    <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline" type="submit" name="botao_verifica_aresta" >
-                      R01
-                    </button>
-                  </div>
-              </div>
-            </div>
-            <div class="w-full md:mx-4 rounded-md bg-cover bg-center">
-              <div class="bg-opacity-50 flex items-center h-full relative">
-                  <div class="flex">
-                    <input type="text" class="flex form-control px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600  focus:outline-none" name="vertice_aresta" id="id_vertice_aresta" placeholder="R0 R1"/>    
-                  </div>
-              </div>
-            </div>
+        <div class="w-full lg:w-1/4 bg-white rounded-lg mx-auto">
+          <div class="flex">
+            <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline" type="submit" name="botao_verifica_aresta" >
+              R01
+            </button>
+            <input type="text" class="flex form-control px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600  focus:outline-none" name="vertice_aresta" id="id_vertice_aresta" placeholder="R0 R1"/>    
+          </div>
+          <div class="flex">
+            <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline" type="submit" name="botao_verifica_grau" >
+               R02
+            </button>
+            <input type="text" class=" form-control block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600  focus:outline-none" name="vertice_grau" id="id_vertice_grau" placeholder="R0" />    
+          </div>
+          <div class="flex">
+            <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline" type="submit" name="botao_verifica_adj">
+              R03
+            </button>
+            <input type="text" class=" form-control block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600  focus:outline-none" name="vertice_adj" id="id_vertice_adj" placeholder="R0" />    
+          </div>
+          <div class="flex">
+            <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline" type="submit" name="botao_caminho_curto_custo">
+              R11
+            </button>
+            <input type="text" class=" form-control block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600  focus:outline-none" name="short_path" id="id_short_path" placeholder="R0 R1" />    
           </div>
 
-          <div class="md:flex md:mt-8 md:-mx-4">
-            <div class="w-full md:mx-4 rounded-md bg-cover bg-center">
-              <div class="bg-opacity-50 flex items-center h-full group relative">
-                  <div class="flex">
-                    <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline" type="submit" name="botao_verifica_grau" >
-                      R02
-                    </button>
-                  </div>
-              </div>
-            </div>
-            <div class="w-full md:mx-4 rounded-md bg-cover bg-center">
-              <div class="bg-opacity-50 flex items-center h-full group relative">
-                  <div class="flex">
-                    <input type="text" class=" form-control block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600  focus:outline-none" name="vertice_grau" id="id_vertice_grau" placeholder="R0" />    
-                  </div>
-              </div>
-            </div>
+          <div class="text-center flex px-6">
+            <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+              type="submit" name="botao_grafo_nori_conexo">
+              R04
+            </button>
           </div>
 
-          <div class="md:flex md:mt-8 md:-mx-4">
-            <div class="w-full md:mx-4 rounded-md bg-cover bg-center">
-              <div class="bg-opacity-50 flex items-center h-full group relative">
-                  <div class="flex">
-                    <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline" type="submit" name="botao_verifica_adj">
-                      R03
-                    </button>
-                  </div>
-              </div>
-            </div>
-            <div class="w-full md:mx-4 rounded-md bg-cover bg-center">
-              <div class="bg-opacity-50 flex items-center h-full group relative">
-                  <div class="flex">
-                    <input type="text" class=" form-control block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600  focus:outline-none" name="vertice_adj" id="id_vertice_adj" placeholder="R0" />    
-                  </div>
-              </div>
-            </div>
+          <div class="text-center flex px-6">
+            <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+              type="submit" name="botao_veri_digra_frac_conexo">
+              R05
+            </button>
           </div>
-
-          <div class="md:flex md:mt-8 md:-mx-4">
-            <div class="w-full md:mx-4 rounded-md bg-cover bg-center">
-              <div class="bg-opacity-50 flex items-center h-full group relative">
-                  <div class="flex">
-                    <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline" type="submit" name="botao_caminho_curto_custo">
-                      R11
-                    </button>
-                  </div>
-              </div>
-            </div>
-            <div class="w-full md:mx-4 rounded-md bg-cover bg-center">
-              <div class="bg-opacity-50 flex items-center h-full group relative">
-                  <div class="flex">
-                    <input type="text" class=" form-control block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600  focus:outline-none" name="short_path" id="id_short_path" placeholder="R0 R1" />    
-                  </div>
-              </div>
-            </div>
+          <div class="text-center flex px-6">
+            <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+              type="submit" name="botao_veri_digra_uni_conexo">
+              R06
+            </button>
           </div>
-
-          <div class="md:flex md:mt-8 md:-mx-4">
-            <div class="w-full mt-3 lg:w-full flex items-center justify-center bg-white rounded-lg lg:rounded-l-none">
-              <div class="text-center flex px-6">
-                <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
-                  type="submit" name="botao_grafo_nori_conexo">
-                  R04
-                </button>
-              </div>
-            </div>
-            <div class="w-full mt-3 lg:w-full flex items-center justify-center bg-white rounded-lg lg:rounded-l-none">
-              <div class="text-center flex px-6">
-                <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
-                  type="submit" name="botao_veri_digra_frac_conexo">
-                  R05
-                </button>
-              </div>
-            </div>
-            <div class="w-full mt-3 lg:w-full flex items-center justify-center bg-white rounded-lg lg:rounded-l-none">
-              <div class="text-center flex px-6">
-                <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
-                  type="submit" name="botao_veri_digra_uni_conexo">
-                  R06
-                </button>
-              </div>
-            </div>
+          <div class="text-center flex px-6">
+            <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+              type="submit" name="botao_di_fort_conex">
+              R07
+            </button>
           </div>
-          
-          
-          <div class="md:flex md:mt-8 md:-mx-4">
-            <div class="w-full mt-3 lg:w-full flex items-center justify-center bg-white rounded-lg lg:rounded-l-none">
-              <div class="text-center flex px-6">
-                <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
-                  type="submit" name="botao_di_fort_conex">
-                  R07
-                </button>
-              </div>
-            </div>
-            <div class="w-full mt-3 lg:w-full flex items-center justify-center bg-white rounded-lg lg:rounded-l-none">
-              <div class="text-center flex px-6">
-                <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
-                  type="submit" name="botao_graf_ciclo?">
-                  R08
-                </button>
-              </div>
-            </div>
-            <div class="w-full mt-3 lg:w-full flex items-center justify-center bg-white rounded-lg lg:rounded-l-none">
-              <div class="text-center flex px-6">
-                <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
-                  type="submit" name="botao_dig_aci_cone_ord_top">
-                  R09
-                </button>
-              </div>
-            </div>
+          <div class="text-center flex px-6">
+            <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+              type="submit" name="botao_graf_ciclo?">
+              R08
+            </button>
           </div>
-          
-          
-          <div class="md:flex md:mt-8 md:-mx-4">
-            <div class="w-full mt-3 lg:w-full flex items-center justify-center bg-white rounded-lg lg:rounded-l-none">
-              <div class="text-center flex px-6">
-                <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
-                  type="submit" name="botao_veri_planar_2-con_eule">
-                  R10
-                </button>
-              </div>
-            </div>
-            <div class="w-full mt-3 lg:w-full flex items-center justify-center bg-white rounded-lg lg:rounded-l-none">
-              <div class="text-center flex px-6">
-                <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
-                  type="submit" name="botao_arv_min">
-                  R12
-                </button>
-              </div>
-            </div>
+          <div class="text-center flex px-6">
+            <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+              type="submit" name="botao_dig_aci_cone_ord_top">
+              R09
+            </button>
+          </div>
+          <div class="text-center flex px-6">
+            <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+              type="submit" name="botao_veri_planar_2-con_eule">
+              R10
+            </button>
+          </div>
+          <div class="text-center flex px-6">
+            <button class="w-full p-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+              type="submit" name="botao_arv_min">
+              R12
+            </button>
           </div>
         </div>
       </div>
