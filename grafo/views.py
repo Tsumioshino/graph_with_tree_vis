@@ -20,6 +20,10 @@ def index(request):
         grafo.digrafo = True
       if request.POST.get('digrafo') == "False":
         grafo.digrafo = False
+      if request.POST.get('tree') == "on":
+        grafo.tree = True
+      if request.POST.get('tree') == "False":
+        grafo.tree = False
       grafo.createDataFrame(request.POST.get("grafo_text"))
       grafo.imagem_bin["grafo"] = grafo.createImg()
     #R1
@@ -119,6 +123,8 @@ def index(request):
       context["image"] = grafo.imagem_bin
     form.fields["grafo_text"].initial = request.POST.get('grafo_text')
     form.fields["digrafo"].initial = request.POST.get('digrafo')
+    form.fields["tree"].initial = request.POST.get('tree')
+
     context['form'] = form
     context['grafo'] = grafo
   else:

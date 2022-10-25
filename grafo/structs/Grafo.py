@@ -9,7 +9,7 @@ import sys
 import copy
 
 class Grafo():
-    def __init__(self, digrafo = False):
+    def __init__(self, digrafo = False, tree = False):
         """Inicializa um grafo mediante instanciação de um Dataframe, 
           em que se possuem as seguintes colunas:
           origem, que é de onde a orientação sai, caso possua;
@@ -19,10 +19,12 @@ class Grafo():
           
         Args:
           digrafo (bool): Valor booleano que define a orientação do grafo. 
+          tree (bool): Valor booleanno que define se deve ser disposto em forma de árvore binária
           Orientado, caso Verdadeiro; Não-orientado, caso Falso.
         """
         self.dataframe = pd.DataFrame(columns=["origem", "destino", "label", "cluster"])
         self.digrafo = digrafo
+        self.tree = tree
         self.log = []
         self.imagem_bin = {}
         self.lista_adjacente = {}
@@ -177,6 +179,7 @@ class Grafo():
           return self.__hasAresta2(args[0])
         elif len(args) == 2 and isinstance(args[0], str) and isinstance(args[1], str):
           return self.__hasAresta3(args[0], args[1])
+        
     def calcGrau(self, input_name): 
         """Calcula o grau de um vértice de um grafo orientado ou não-orientado.
         
@@ -502,6 +505,10 @@ class Grafo():
           list_order = self.buscaProfundidade001()
           self.imagem_bin["topologica"] = self.createImg(ordering=list_order, nome="Ordenação Topologica")
 
+
+
+
+        
     def ordTopologica(self):
         list_order = []
         if self.digrafo and not self.buscaProfundidade001(identify_cycle=True): #not verifying conexidade
@@ -767,7 +774,17 @@ class Grafo():
               second_dataframe.dataframe.drop(index, axis=0, inplace=True)
           self.imagem_bin['agm'] = second_dataframe.createImg(nome="AGM")
           
-
+    """def createBinaryTree(self):
+      elements = self.dataframe['row']
+      tree = Graph(self.digrafo)
+      i = 0
+      tree.dataframe['row'] = elements[0]
+      for element in elements:
+        if element <= elements[i]:
+          
+        tree.dataframe['row'] = element
+      """  
+      
     def createDataFrame(self, text):
         """Cria o DataFrame baseado em um arquivo de texto, permitindo a manipulação do mesmo.
 
@@ -779,16 +796,29 @@ class Grafo():
           lin[3], correspondente ao subgrupo do grafo em questão (cluster).
         """
         dados = text.split("\n")
+        i = -1
+        lol = []
         for linha in dados:
+          i += 1
           lin = linha.split()
-          if len(lin) == 4:
-            self.__createAresta(lin[0], lin[1], lin[2], lin[3])
-          elif len(lin) == 3:
-            self.__createAresta(lin[0], lin[1], lin[2])
-          elif len(lin) == 2:
-            self.__createAresta(lin[0], lin[1])
-          elif len(lin) == 1:
+          if self.tree:
+            continue
+            """lol.append(lin[0])
+            if i >= 1:
+              if lin[0] < lol[0]:
+                if lin[0] < lol[i]
+              
             self.__createAresta(lin[0])
+            """
+          else:
+            if len(lin) == 4:
+              self.__createAresta(lin[0], lin[1], lin[2], lin[3])
+            elif len(lin) == 3:
+              self.__createAresta(lin[0], lin[1], lin[2])
+            elif len(lin) == 2:
+              self.__createAresta(lin[0], lin[1])
+            elif len(lin) == 1:
+              self.__createAresta(lin[0])
         try:
             self.__conversaoDataMatriz()
         except TypeError:
@@ -820,6 +850,8 @@ class Grafo():
               level.node(ordering[node_name])
             for edge_inv in range(0, len(ordering)-1):
               level.edge(ordering[edge_inv], ordering[edge_inv+1], style='invis')
+        #if self.tree:
+        #  self.createBinaryTree
         if (clusters > 1):
           for cluster in self.dataframe.cluster.unique():
             df = self.dataframe.query("cluster == @cluster")
